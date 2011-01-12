@@ -64,6 +64,13 @@ public class RootWidget extends ConsoleHost {
 	    		opts.raise();
 	    	}
         // arksu: 18.11.2010
+        } else if ((ev.getKeyCode() == KeyEvent.VK_Z) && ((ev.getModifiers() & ev.CTRL_MASK) != 0)) {
+            Config.assign_to_tile = !Config.assign_to_tile;
+            Config.saveOptions();
+        // 11.12.2010
+        } else if ((ev.getKeyCode() == KeyEvent.VK_D) && ((ev.getModifiers() & ev.CTRL_MASK) != 0)) {
+            Config.debug_flag = !Config.debug_flag;
+        // arksu: 18.11.2010
         } else if ((ev.getKeyCode() == KeyEvent.VK_X) && ((ev.getModifiers() & ev.CTRL_MASK) != 0)) {
             Config.xray = !Config.xray;
             Config.saveOptions();
@@ -72,6 +79,12 @@ public class RootWidget extends ConsoleHost {
             Config.saveOptions();
         } else if ((ev.getKeyCode() == KeyEvent.VK_N) && ((ev.getModifiers() & ev.CTRL_MASK) != 0)) {
             CustomConfig.hasNightVision = !CustomConfig.hasNightVision;
+        } else if ((ev.getKeyCode() == KeyEvent.VK_F) && ((ev.getModifiers() & ev.CTRL_MASK) != 0)) {
+            if (UI.mv != null) UI.mv.ResetCam();
+        // arksu: 20.11.2010
+        } else if ((ev.getKeyCode() == KeyEvent.VK_G) && ((ev.getModifiers() & ev.CTRL_MASK) != 0)) {
+            Config.show_map_grid = !Config.show_map_grid;
+            Config.saveOptions();
         // arksu: 28.06.2010
         // F4
         } else if (ev.getKeyCode() == KeyEvent.VK_F4) {
