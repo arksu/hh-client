@@ -119,8 +119,8 @@ public class MainFrame extends Frame implements Runnable, FSMan {
     }
 
     public MainFrame(int w, int h) {
-	super("Haven and Hearth <ark.su build 22.11.2010>");
-    innerSize = new Dimension(w, h);
+	super("Haven and Hearth <ark.su build 12.01.2011>");
+    innerSize = new Dimension(w, h); 
     centerPoint = new Point(innerSize.width / 2, innerSize.height / 2);
     p = new HavenPanel(w, h);
 	fsmode = findmode(w, h);
@@ -133,9 +133,10 @@ public class MainFrame extends Frame implements Runnable, FSMan {
 	p.requestFocus();
 	seticon();
 	setVisible(true);
+	
 	p.init();
     setResizable(true);
-    }
+    }	
 
     public static Coord getScreenSize() {
         return new Coord(Toolkit.getDefaultToolkit().getScreenSize());

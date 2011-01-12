@@ -59,8 +59,11 @@ public class Config {
     public static HashSet<String> hideObjectList;
     public static String currentCharName;
     public static Properties options;
-    public static boolean gilbertus_map_dump = true;
-    public static boolean ark_map_dump = false;
+    public static boolean gilbertus_map_dump = false;
+    public static boolean ark_map_dump = true;
+    public static boolean assign_to_tile = false; // всегда привязыватся к тайлу
+    public static boolean show_map_grid = false; // выводить сетку
+    public static boolean highlight_hided_objects = false; // подсвечивать спрятанные объекты
 
 
     static {

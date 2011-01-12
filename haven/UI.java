@@ -42,6 +42,7 @@ public class UI {
     public MapView mainview;
     static public FlowerMenu flower_menu; // arksu
     static public OptWnd options_wnd; //arksu
+    static public MapView mv;
     public boolean modshift, modctrl, modmeta, modsuper;
     long lastevent = System.currentTimeMillis();
     public Widget mouseon;
@@ -168,6 +169,8 @@ public class UI {
 		    mainview = (MapView)wdg;
         if (wdg instanceof FlowerMenu)
             flower_menu = (FlowerMenu)wdg;
+        if (wdg instanceof MapView)
+        	mv = (MapView)wdg;
 	}
     }
 
@@ -187,6 +190,8 @@ public class UI {
             flower_menu = null;
         if (wdg instanceof OptWnd)
             options_wnd = null;
+        if (wdg instanceof MapView)
+        	mv = null;
 	    rwidgets.remove(wdg);
 	}
 	for(Widget child = wdg.child; child != null; child = child.next)
@@ -211,6 +216,8 @@ public class UI {
             flower_menu = null;
         if (wdg instanceof OptWnd)
             options_wnd = null;
+        if (wdg instanceof MapView)
+        	mv = null;
 		destroy(wdg);
 	    }
 	}
