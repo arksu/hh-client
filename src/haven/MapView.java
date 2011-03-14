@@ -1329,6 +1329,7 @@ public class MapView extends Widget implements DTarget, Console.Directory {
 			    g.atext("tile coord: " + mouse_tile.toString(), new Coord(10, ay), 0, 1); ay=ay+margin;
 	    	}
 		    g.atext("cursor name: " + ark_bot.cursor_name, new Coord(10, ay), 0, 1); ay=ay+margin;
+		    g.atext("player=" + playergob, new Coord(10, ay), 0, 1); ay=ay+margin;
 		    g.atext("time_to_start: " + time_to_start, new Coord(10, ay), 0, 1); ay=ay+margin;
 		    if (hhl_main.symbols != null && Config.debug_flag) {
 		    	synchronized (hhl_main.symbols.ShowNames) {

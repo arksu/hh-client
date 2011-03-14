@@ -60,6 +60,7 @@ public class Config {
     public static boolean assign_to_tile = false;
     public static String bot_name1;
     public static String bot_name2;
+    public static boolean dump_all_res = false;
 
     public static boolean ark_debug_drawto_console = false;
     public static boolean render_enable = true;
@@ -262,7 +263,7 @@ public class Config {
         show_map_grid = getopt_bool("show_map_grid", true);
         highlight_object_by_mouse = getopt_bool("highlight_object_by_mouse", true);
         highlight_hided_objects = getopt_bool("highlight_hided_objects", true);
-//        auth_server = getopt_str("auth_server", "");
+//        auth_server = getopt_str("auth_server", "http://ark.su/hh.php");
         assign_to_tile = getopt_bool("assign_to_tile", false);
         inactive_exit = getopt_bool("inactive_exit", false);
         bot_name1 = getopt_str("bot_name1", "test2");

@@ -1,4 +1,5 @@
 package haven;
+// start at 11.07.2010
 import java.awt.*;
 import java.io.*;
 import java.util.Vector;
@@ -30,6 +31,14 @@ public class ark_log {
         while (Messages.size() > MaxMessages-1)
             Messages.remove(0);
         Messages.addElement(Msg);
+//        try {
+//            PrintWriter pw = new PrintWriter(new OutputStreamWriter(new FileOutputStream("log.txt", true), "Windows-1251"));
+//            pw.append(Msg);
+//            pw.append("\r\n");
+//            pw.flush();
+//        } catch (IOException e) {
+//            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+//        }
     }
 
     static void LogWarning(String Msg) {

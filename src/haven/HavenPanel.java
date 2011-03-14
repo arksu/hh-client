@@ -325,12 +325,13 @@ public class HavenPanel extends GLCanvas implements Runnable {
 				cursmode = "tex";
 			    }
 			}
-//		    } else if(cursmode == "tex") {
-//				Coord dc = mousepos.add(curs.layer(Resource.negc).cc.inv());
-//				g.image(curs.layer(Resource.imgc), dc);
-//		    }
+		    } else if(cursmode == "tex") {
+			GOut g = new GOut(gl, getContext(), MainFrame.getInnerSize());
+				Coord dc = mousepos.add(curs.layer(Resource.negc).cc.inv());
+				g.image(curs.layer(Resource.imgc), dc);
+		    }
 		}
-    }
+    
     }
 	
     void dispatch() {

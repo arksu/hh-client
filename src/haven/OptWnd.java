@@ -71,7 +71,7 @@ public class OptWnd extends Window {
     public OptWnd(Coord c, Widget parent) {
 	super(c, new Coord(400, 340), parent, "Options");
 
-	body = new Tabs(Coord.z, new Coord(400, 500), this) {
+	body = new Tabs(Coord.z, new Coord(400, 300), this) {
 		public void changed(Tab from, Tab to) {
 		    Utils.setpref("optwndtab", to.btn.text.text);
 		    from.btn.c.y = 0;
@@ -138,21 +138,21 @@ public class OptWnd extends Window {
 		}};
         chk.a = Config.highlight_object_by_mouse;
 
-        chk = new CheckBox(new Coord(10, 250), tab, "Highlight hidden objects") {
+        chk = new CheckBox(new Coord(10, 250), tab, "Highlight hided objects") {
 		public void changed(boolean val) {
 		    Config.highlight_hided_objects = val;
             Config.saveOptions();
 		}};	
         chk.a = Config.highlight_hided_objects;
         
-        chk = new CheckBox(new Coord(10, 280), tab, "arksu map dumper (needs restart)") {
+        chk = new CheckBox(new Coord(10, 280), tab, "arksu map dumper (need restart)") {
     		public void changed(boolean val) {
     		    Config.ark_map_dump = val;
                 Config.saveOptions();
     		}};
         chk.a = Config.ark_map_dump;
         
-        chk = new CheckBox(new Coord(10, 310), tab, "Gilbertus map dumper (needs restart)") {
+        chk = new CheckBox(new Coord(10, 310), tab, "Gilbertus map dumper (need restart)") {
     		public void changed(boolean val) {
     		    Config.gilbertus_map_dump = val;
                 Config.saveOptions();
